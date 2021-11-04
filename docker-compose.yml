@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+ mariadb:
+  image: "mariadb"
+  container_name: "mariadb"
+  hostname: "mariadb"
+  restart: always
+  env_file:
+   - ".env"
+  volumes:
+   - "mariadb_vol:/var/lib/mysql"
+   - "/etc/localtime:/etc/localtime:ro"
+  environment:
+   - "MYSQL_ROOT_PASSWORD"
+   - "MYSQL_PASSWORD"
+   - "MYSQL_DATABASE"
+   - "MYSQL_USER"
+  ports:
+    - 3306:3306
+
+ vaultwarden:
+  image: "vaultwarden/server:latest"
+  container_name: "vaultwarden"
+  hostname: "vaultwarden"
+  restart: always
+  env_file:
+   - ".env"
+  volumes:
+   - "vaultwarden_vol:/data/"
+  environment:
+   - DATABASE_URL
+   - ADMIN_TOKEN
+   - RUST_BACKTRACE
+  ports:
+   - "80:80"
+
+volumes:
+ vaultwarden_vol:
+ mariadb_vol:
