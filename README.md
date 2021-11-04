@@ -1,7 +1,7 @@
 # VaultWarden with MySQL<a name="overview"></a>
 For testing or studying, please go to the "Deploy VaultWarden with local MySQL Container" part.  
 For production, please go to the "Deployment with External MySQL Services" part.<br></br>
-To know more about VaultWarden please go to:https://github.com/dani-garcia/vaultwarden/wiki/Using-the-MariaDB-(MySQL)-Backend
+To know more about VaultWarden please go to: https://github.com/dani-garcia/vaultwarden/wiki/Using-the-MariaDB-(MySQL)-Backend
 
 # Table of contents
 1. [Overview](#overview)
