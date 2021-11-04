@@ -27,7 +27,7 @@ These sets of instructions are used for running **TWO** containers.
 (Reminder: Please ensure you are using `docker-compose.yml` and `.env` files in deployingment with local MySQL)
 
 ### **Start Services** <a name="StartServicesLocal"></a>
-`docker-compose up -d` <br>
+`docker-compose up -d --build` <br>
 (Note: `-d` flag will run the services in background)
 ### **Stop Services** <a name="StopServicesLocal"></a>
 `docker-compose down` <br>
@@ -40,7 +40,12 @@ These sets of instructions are used for running **TWO** containers.
 # Deployment with External MySQL Services <a name="DeploymentwithExternalMySQLContainer"></a>
 RECOMMENDED FOR PRODUCTION SETUP IN A CLOUD ENVIRONMENT.
 
-If you have MySQL deployed in cloud or on some remote instance, use this option. The below instructions only spins up a single container.   
+If you have MySQL deployed in cloud or on some remote instance, use this option with `docker-compose.prod.yml` and `.env.prod`  
+
+### **Connection String Syntax:**
+`DATABASE_URL=mysql://[[user]:[password]@]host[:port][/database]`
+  
+  The below instructions only spins up a single container.   
 
 * Single Container - vaultwarden only
 ### **Start Services** <a name="StartServices"></a>
