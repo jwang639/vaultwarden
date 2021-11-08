@@ -3,6 +3,9 @@ For testing or studying, please go to the "Deploy VaultWarden with local MySQL C
 For production, please go to the "Deployment with External MySQL Services" part.<br></br>
 To know more about VaultWarden please go to: https://github.com/dani-garcia/vaultwarden/wiki/Using-the-MariaDB-(MySQL)-Backend
 
+To enable the admin page, you need to set an authentication token. This token can be anything, but it's recommended to use a long, randomly generated string of characters, for example running openssl rand -base64 48. Keep this token secret, this is the password to access the admin area of your server!
+
+To set the token, use the ADMIN_TOKEN variable
 # Table of contents
 1. [Overview](#overview)
 2. [Deployment with Local MySQL Container](#DeploymentwithLocalMySQLContainer)
